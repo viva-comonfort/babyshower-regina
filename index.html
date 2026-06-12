@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baby Shower · Esperando a Regina</title>
+<meta name="description" content="Baby shower en honor a Karla · Domingo 4 de Octubre, 2026 · Comonfort, Gto.">
+<meta property="og:title" content="Baby Shower · Esperando a Regina 🎀">
+<meta property="og:description" content="Domingo 04 · 10 · 2026 — Tienes una invitación especial. Ábrela aquí ✨">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://viva-comonfort.github.io/babyshower-regina/">
+<meta property="og:image" content="https://viva-comonfort.github.io/babyshower-regina/img/panza.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rosa:#c98995;
+  --rosa-oscuro:#9d5f6c;
+  --orogris:#c0a08c;
+  --oro-claro:#dcc3b2;
+  --crema:#fdf9f7;
+  --rosita:#f8edee;
+  --tinta:#54424a;
+  --script:'Dancing Script',cursive;
+  --serif:'Cormorant Garamond',serif;
+  --sans:'Jost',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--serif);color:var(--tinta);background:var(--crema);overflow-x:hidden;line-height:1.6}
+.label{font-family:var(--sans);font-weight:400;letter-spacing:.35em;text-transform:uppercase;font-size:.72rem;color:var(--orogris)}
+h2.titulo{font-family:var(--script);font-weight:500;font-size:clamp(2.5rem,9vw,3.6rem);color:var(--rosa-oscuro);line-height:1.15;margin:.4rem 0 .2rem}
+section{padding:4.5rem 1.5rem;position:relative}
+.inner{max-width:640px;margin:0 auto;text-align:center}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.visible{opacity:1;transform:none}
+.divisor{display:flex;justify-content:center;margin:1.4rem auto 0}
+.divisor svg{width:190px;height:auto;opacity:.9}
+
+/* ---------- portada ---------- */
+.portada{
+  min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:4rem 1.5rem 3rem;
+  background:
+    radial-gradient(ellipse at 50% -10%,rgba(201,137,149,.15),transparent 55%),
+    radial-gradient(ellipse at 50% 115%,rgba(192,160,140,.13),transparent 55%),
+    var(--crema);
+}
+.estrella{position:absolute;pointer-events:none;color:var(--oro-claro);animation:brilla 3.5s ease-in-out infinite}
+.estrella.a{top:50px;left:24px;font-size:1.2rem}
+.estrella.b{top:110px;right:36px;font-size:.85rem;animation-delay:-1s}
+.estrella.c{top:36px;right:90px;font-size:1rem;animation-delay:-2.2s}
+.estrella.d{bottom:130px;left:40px;font-size:.9rem;animation-delay:-1.6s}
+.estrella.e{bottom:80px;right:28px;font-size:1.25rem;animation-delay:-.5s}
+@keyframes brilla{0%,100%{opacity:.35;transform:scale(.9)}50%{opacity:1;transform:scale(1.1)}}
+.luna{position:absolute;top:42px;left:50%;transform:translateX(-50%);width:54px;opacity:.85;pointer-events:none}
+.portada .label{margin-bottom:1.2rem}
+.portada .babyshower{
+  font-family:var(--sans);font-weight:300;letter-spacing:.5em;text-transform:uppercase;
+  font-size:clamp(.85rem,3.4vw,1.05rem);color:var(--tinta);padding-left:.5em;
+}
+.portada h1{font-family:var(--script);font-weight:600;font-size:clamp(3rem,13vw,5.4rem);color:var(--rosa-oscuro);line-height:1.1;margin-top:.4rem}
+.mama{font-family:var(--serif);font-style:italic;font-size:clamp(1.05rem,4vw,1.3rem);margin-top:1rem;color:var(--tinta)}
+.fecha-grande{display:flex;align-items:center;gap:1.1rem;justify-content:center;margin-top:2rem;color:var(--rosa-oscuro)}
+.fecha-grande .num{font-size:clamp(1.4rem,5.5vw,2rem);font-weight:600;letter-spacing:.05em;white-space:nowrap}
+.fecha-grande .sep{width:1px;height:44px;background:var(--orogris);opacity:.6}
+.fecha-grande .dia{font-family:var(--sans);font-weight:300;letter-spacing:.3em;text-transform:uppercase;font-size:.7rem}
+.scroll-hint{margin-top:3rem;font-family:var(--sans);font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--orogris);animation:flotar 2.4s ease-in-out infinite}
+@keyframes flotar{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+
+.tarjeta-invitado{
+  background:#fff;border:1px solid rgba(192,160,140,.45);border-radius:4px;
+  padding:1.6rem 2rem;margin:2.2rem auto 0;max-width:420px;
+  box-shadow:0 14px 36px -18px rgba(157,95,108,.3);position:relative;
+}
+.tarjeta-invitado::before{content:'';position:absolute;inset:7px;border:1px solid rgba(192,160,140,.3);border-radius:2px;pointer-events:none}
+.tarjeta-invitado .nombre-invitado{font-family:var(--script);font-size:2rem;color:var(--rosa-oscuro);line-height:1.2}
+.tarjeta-invitado .pases{font-family:var(--sans);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--orogris);margin-top:.5rem}
+
+/* ---------- foto ---------- */
+.marco-arco{
+  width:min(74vw,330px);margin:0 auto;border-radius:999px 999px 6px 6px;overflow:hidden;
+  border:1px solid rgba(192,160,140,.55);padding:10px;background:#fff;
+  box-shadow:0 24px 50px -24px rgba(157,95,108,.45);
+}
+.marco-arco img{width:100%;display:block;border-radius:999px 999px 4px 4px;aspect-ratio:3/4.3;object-fit:cover}
+
+/* ---------- countdown ---------- */
+.cuenta{background:var(--rosa-oscuro);color:var(--crema)}
+.cuenta .label{color:var(--oro-claro)}
+.cuenta h2.titulo{color:var(--crema)}
+.cajas{display:flex;justify-content:center;gap:.55rem;margin-top:2rem}
+.caja{background:rgba(253,249,247,.08);border:1px solid rgba(220,195,178,.35);border-radius:4px;flex:1 1 0;min-width:0;max-width:92px;padding:.95rem .2rem .75rem}
+.caja .n{font-size:clamp(1.45rem,5.8vw,2.1rem);font-weight:600;color:#fff;font-variant-numeric:tabular-nums}
+.caja .t{font-family:var(--sans);font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--oro-claro);margin-top:.2rem}
+
+/* ---------- mensaje ---------- */
+.mensaje p.quote{font-size:1.25rem;font-style:italic;max-width:480px;margin:1.4rem auto 0}
+.mensaje .firma{font-family:var(--script);font-size:1.8rem;color:var(--rosa-oscuro);margin-top:1.6rem}
+
+/* ---------- qué habrá ---------- */
+.qhabra{background:var(--rosita)}
+.featgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.4rem}
+@media(max-width:480px){.featgrid{grid-template-columns:1fr;max-width:300px;margin-left:auto;margin-right:auto}}
+.feat{background:#fff;border:1px solid rgba(192,160,140,.3);border-radius:6px;padding:1.5rem .8rem;box-shadow:0 12px 28px -18px rgba(157,95,108,.35)}
+.feat .emoji{font-size:2rem;line-height:1}
+.feat p{font-family:var(--serif);font-weight:600;font-size:1.05rem;color:var(--rosa-oscuro);margin-top:.6rem;line-height:1.25}
+
+/* ---------- ubicación ---------- */
+.lugar{background:#fff;border:1px solid rgba(192,160,140,.35);border-radius:6px;padding:2rem 1.6rem;margin-top:2.4rem;box-shadow:0 16px 36px -22px rgba(157,95,108,.35)}
+.lugar h3{font-family:var(--script);font-size:2rem;font-weight:500;color:var(--rosa-oscuro)}
+.lugar .dir{margin:.5rem 0 1.2rem;font-size:1.02rem;opacity:.9}
+.btn{display:inline-block;font-family:var(--sans);font-size:.72rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;text-decoration:none;padding:.85rem 1.8rem;border-radius:3px;transition:all .25s ease}
+.btn-oro{color:var(--rosa-oscuro);border:1px solid var(--orogris);background:transparent}
+.btn-oro:hover{background:var(--orogris);color:#fff}
+
+/* ---------- regalos ---------- */
+.opciones-regalo{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2rem}
+@media(max-width:480px){.opciones-regalo{grid-template-columns:1fr}}
+.opcion{background:#fff;border:1px solid rgba(192,160,140,.3);border-radius:6px;padding:1.6rem 1.2rem}
+.opcion h4{font-family:var(--sans);font-weight:500;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--orogris);margin-bottom:.6rem}
+.opcion p{font-size:1rem;margin:0}
+.regalos > .inner > p{max-width:440px;margin:1.2rem auto 0;font-size:1.12rem}
+
+/* ---------- galería ---------- */
+.fotos{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin-top:2.4rem}
+.fotos figure{overflow:hidden;border-radius:4px;border:1px solid rgba(192,160,140,.4);background:#fff;padding:7px}
+.fotos img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;border-radius:2px;transition:transform .6s ease}
+.fotos figure:hover img{transform:scale(1.05)}
+.fotos figure:nth-child(2),.fotos figure:nth-child(4){transform:translateY(1.4rem)}
+
+/* ---------- rsvp ---------- */
+.rsvp{background:linear-gradient(rgba(157,95,108,.85),rgba(157,95,108,.92)),url('img/piecitos.jpg') center/cover;color:var(--crema)}
+.rsvp .label{color:var(--oro-claro)}
+.rsvp h2.titulo{color:var(--crema)}
+.rsvp p{max-width:430px;margin:1rem auto 0;font-size:1.12rem}
+.btn-wa{margin-top:2rem;background:#25d366;color:#fff;border:none;display:inline-flex;align-items:center;gap:.7rem;font-size:.78rem;padding:1.05rem 2.1rem;border-radius:50px;box-shadow:0 14px 30px -10px rgba(37,211,102,.55);font-family:var(--sans);font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none}
+.btn-wa:hover{transform:translateY(-2px)}
+.btn-wa svg{width:19px;height:19px;flex:none}
+.fecha-limite{font-family:var(--sans);font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--oro-claro);margin-top:1.6rem !important}
+
+/* ---------- música ---------- */
+.btn-musica{position:fixed;right:16px;bottom:16px;z-index:50;width:52px;height:52px;border-radius:50%;border:1px solid var(--orogris);background:rgba(253,249,247,.94);color:var(--rosa-oscuro);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px -8px rgba(157,95,108,.5);transition:transform .2s ease}
+.btn-musica:hover{transform:scale(1.07)}
+.btn-musica.activa{animation:girar 6s linear infinite;background:var(--rosa-oscuro);color:var(--oro-claro);border-color:var(--rosa-oscuro)}
+@keyframes girar{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.btn-musica svg{width:22px;height:22px}
+
+footer{background:#43333a;color:rgba(253,249,247,.85);text-align:center;padding:2.6rem 1.5rem}
+footer .marca{font-family:var(--sans);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--oro-claro)}
+footer .pitch{font-size:1.05rem;font-style:italic;margin-top:.7rem;opacity:.9}
+footer a{display:inline-block;margin-top:1.1rem;color:#25d366;font-family:var(--sans);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(37,211,102,.5);border-radius:50px;padding:.6rem 1.4rem}
+footer a:hover{background:rgba(37,211,102,.12)}
+</style>
+</head>
+<body>
+
+<header class="portada">
+  <svg class="luna" viewBox="0 0 50 50" fill="none" aria-hidden="true"><path d="M38 8 a20 20 0 1 0 6 30 a16 16 0 0 1 -6 -30z" fill="#dcc3b2" opacity=".9"/></svg>
+  <span class="estrella a">✦</span>
+  <span class="estrella b">✦</span>
+  <span class="estrella c">✧</span>
+  <span class="estrella d">✧</span>
+  <span class="estrella e">✦</span>
+
+  <p class="label">Una estrellita viene en camino</p>
+  <p class="babyshower">Baby Shower</p>
+  <h1>Esperando a Regina</h1>
+  <p class="mama">En honor a la futura mamá, Karla Méndez 🎀</p>
+  <div class="fecha-grande">
+    <span class="dia">Domingo</span>
+    <span class="sep"></span>
+    <span class="num">04 · 10 · 2026</span>
+    <span class="sep"></span>
+    <span class="dia">4:00 pm</span>
+  </div>
+
+  <div class="tarjeta-invitado">
+    <p class="label" style="letter-spacing:.28em;font-size:.62rem">Invitación especial para</p>
+    <p class="nombre-invitado" id="nombreInvitado">Nuestras amigas y familia</p>
+    <p class="pases" id="pasesInvitado"></p>
+  </div>
+
+  <p class="scroll-hint">Desliza ↓</p>
+</header>
+
+<section>
+  <div class="inner reveal">
+    <div class="marco-arco"><img src="img/panza.jpg" alt="Esperando a Regina"></div>
+    <div class="divisor">
+      <svg viewBox="0 0 190 30" fill="none" aria-hidden="true">
+        <line x1="0" y1="15" x2="70" y2="15" stroke="#c0a08c" stroke-width=".8"/>
+        <line x1="120" y1="15" x2="190" y2="15" stroke="#c0a08c" stroke-width=".8"/>
+        <path d="M95 7 l2.2 4.6 5 .7 -3.6 3.5 .9 5 -4.5 -2.4 -4.5 2.4 .9 -5 -3.6 -3.5 5 -.7z" fill="#c98995" opacity=".85"/>
+        <circle cx="76" cy="15" r="1.6" fill="#c0a08c"/>
+        <circle cx="114" cy="15" r="1.6" fill="#c0a08c"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="cuenta">
+  <div class="inner reveal">
+    <p class="label">Faltan</p>
+    <h2 class="titulo">para celebrar a Regina</h2>
+    <div class="cajas">
+      <div class="caja"><div class="n" id="cd-d">—</div><div class="t">Días</div></div>
+      <div class="caja"><div class="n" id="cd-h">—</div><div class="t">Horas</div></div>
+      <div class="caja"><div class="n" id="cd-m">—</div><div class="t">Min</div></div>
+      <div class="caja"><div class="n" id="cd-s">—</div><div class="t">Seg</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="mensaje">
+  <div class="inner reveal">
+    <p class="label">Un mensaje de la futura mamá</p>
+    <h2 class="titulo">Las espero con amor</h2>
+    <p class="quote">“Muy pronto tendré entre mis brazos a mi pedacito de cielo. Antes de que llegue, quiero celebrar con las mujeres que más quiero. ¡Acompáñame!”</p>
+    <p class="firma">— Karla</p>
+  </div>
+</section>
+
+<section class="qhabra">
+  <div class="inner reveal">
+    <p class="label">¿Qué habrá?</p>
+    <h2 class="titulo">Una tarde linda</h2>
+    <div class="featgrid">
+      <div class="feat"><div class="emoji">🎲</div><p>Juegos y premios</p></div>
+      <div class="feat"><div class="emoji">🧁</div><p>Bocadillos y café</p></div>
+      <div class="feat"><div class="emoji">📸</div><p>Recuerdos para llevar</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner reveal">
+    <p class="label">¿Dónde?</p>
+    <h2 class="titulo">Ubicación</h2>
+    <div class="lugar">
+      <h3>Casa de la abuela Tere</h3>
+      <p class="dir">Calle Allende 16, Centro<br>Comonfort, Gto. · Domingo 4:00 pm</p>
+      <a class="btn btn-oro" href="https://maps.google.com/?q=Comonfort,+Guanajuato" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+  </div>
+</section>
+
+<section class="regalos qhabra">
+  <div class="inner reveal">
+    <p class="label">Detalles</p>
+    <h2 class="titulo">Para consentir a Regina</h2>
+    <p>Si deseas tener un detalle con la bebé, estas dos opciones nos ayudan muchísimo:</p>
+    <div class="opciones-regalo">
+      <div class="opcion">
+        <h4>Lluvia de pañales</h4>
+        <p>Etapa 1 y 2 — ¡nunca son demasiados! 🍼</p>
+      </div>
+      <div class="opcion">
+        <h4>Mesa de regalos</h4>
+        <p>Amazon · Lista "Bebé Regina"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner reveal">
+    <p class="label">Dulce espera</p>
+    <h2 class="titulo">Galería</h2>
+    <div class="fotos">
+      <figure><img src="img/panza.jpg" alt="La dulce espera" loading="lazy"></figure>
+      <figure><img src="img/juguetes.jpg" alt="Sus juguetes" loading="lazy"></figure>
+      <figure><img src="img/piecitos.jpg" alt="Piecitos" loading="lazy"></figure>
+      <figure><img src="img/mama.jpg" alt="Mamá y bebé" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="rsvp">
+  <div class="inner reveal">
+    <p class="label">Confirma tu asistencia</p>
+    <h2 class="titulo">¿Contamos contigo?</h2>
+    <p>Ayúdanos a preparar tu lugar (y tu premio de los juegos 😉). Confirma por WhatsApp:</p>
+    <a class="btn-wa" id="btnRsvp" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4l-2.2-1c-.3-.1-.6-.1-.8.2l-1 1.2c-.2.2-.5.3-.7.2-1-.4-3.1-1.6-4.3-4-.1-.3-.1-.5.1-.7l1-1.2c.2-.3.2-.6.1-.8l-1-2.3c-.2-.5-.7-.7-1.2-.6-1.1.4-2.1 1.4-2.1 2.7 0 1.6.7 3.6 2.7 5.9 2.3 2.6 4.7 3.6 6.5 3.7 1.4.1 2.5-.8 2.9-1.9.2-.5-.1-1-.6-1.2zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.3 8.3 0 1 1 12 20.3z"/></svg>
+      Confirmar por WhatsApp
+    </a>
+    <p class="fecha-limite">Favor de confirmar antes del 27 · 09 · 2026</p>
+  </div>
+</section>
+
+<footer>
+  <p class="marca">Invitación digital · Viva Comonfort</p>
+  <p class="pitch">¿Te gustó? Crea la tuya para baby showers, bautizos y bodas — lista en 24 horas, desde $399.</p>
+  <a href="https://wa.me/16573776892?text=Hola%2C%20vi%20una%20invitaci%C3%B3n%20digital%20y%20quiero%20una%20para%20mi%20evento%20%E2%9C%A8" target="_blank" rel="noopener">Pide la tuya por WhatsApp</a>
+</footer>
+
+<button class="btn-musica" id="btnMusica" aria-label="Reproducir música">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 18V6l11-2v12.5a3 3 0 1 1-2-2.83V7.2L11 8.6v9.9a3 3 0 1 1-2-2.83z" transform="translate(-2 0)"/></svg>
+</button>
+
+<script>
+const params = new URLSearchParams(location.search);
+const invitado = params.get('invitado');
+const pases = params.get('pases');
+if (invitado) document.getElementById('nombreInvitado').textContent = invitado;
+if (pases) document.getElementById('pasesInvitado').textContent = pases + (pases === '1' ? ' pase reservado' : ' pases reservados');
+
+const msj = encodeURIComponent(`Hola! Confirmo mi asistencia al baby shower de Regina 🎀 ${invitado ? '— ' + invitado : ''}${pases ? ' (' + pases + ' personas)' : ''}`);
+document.getElementById('btnRsvp').href = `https://wa.me/16573776892?text=${msj}`;
+
+const objetivo = new Date('2026-10-04T16:00:00-06:00').getTime();
+const pad = n => String(n).padStart(2, '0');
+function tick() {
+  const dif = Math.max(0, objetivo - Date.now());
+  document.getElementById('cd-d').textContent = Math.floor(dif / 864e5);
+  document.getElementById('cd-h').textContent = pad(Math.floor(dif % 864e5 / 36e5));
+  document.getElementById('cd-m').textContent = pad(Math.floor(dif % 36e5 / 6e4));
+  document.getElementById('cd-s').textContent = pad(Math.floor(dif % 6e4 / 1e3));
+}
+tick(); setInterval(tick, 1000);
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ---------- Estrellita (Twinkle Twinkle — dominio público) — Web Audio ---------- */
+let ctx = null, tocando = false, proximaNota = 0, idx = 0, timer = null, master = null;
+const TEMPO = 80, NEGRA = 60 / TEMPO;
+const MELODIA = [
+  [261.63,1],[261.63,1],[392.00,1],[392.00,1],  [440.00,1],[440.00,1],[392.00,2],
+  [349.23,1],[349.23,1],[329.63,1],[329.63,1],  [293.66,1],[293.66,1],[261.63,2],
+  [392.00,1],[392.00,1],[349.23,1],[349.23,1],  [329.63,1],[329.63,1],[293.66,2],
+  [392.00,1],[392.00,1],[349.23,1],[349.23,1],  [329.63,1],[329.63,1],[293.66,2],
+];
+const ACORDES = [
+  [130.81,261.63,329.63,392.00],[174.61,261.63,349.23,440.00],
+  [130.81,261.63,329.63,392.00],[196.00,246.94,293.66,392.00],
+  [130.81,261.63,329.63,392.00],[196.00,246.94,293.66,392.00],
+  [130.81,261.63,329.63,392.00],[196.00,246.94,293.66,392.00],
+];
+let beatEnCompas = 0, compas = 0;
+function nota(freq, t, dur, vol, tipo) {
+  const o = ctx.createOscillator(), g = ctx.createGain();
+  o.type = tipo; o.frequency.value = freq;
+  g.gain.setValueAtTime(0, t);
+  g.gain.linearRampToValueAtTime(vol, t + 0.03);
+  g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+  o.connect(g); g.connect(master);
+  o.start(t); o.stop(t + dur + 0.05);
+}
+function agenda() {
+  while (proximaNota < ctx.currentTime + 0.3) {
+    const [f, d] = MELODIA[idx % MELODIA.length];
+    const ac = ACORDES[compas % ACORDES.length];
+    if (beatEnCompas === 0) {
+      nota(ac[0], proximaNota, NEGRA * 3.6, 0.12, 'triangle');
+      nota(ac[2], proximaNota + NEGRA * 2, NEGRA * .9, 0.035, 'triangle');
+    }
+    nota(f, proximaNota, NEGRA * d * 1.8, 0.085, 'sine');
+    nota(f * 2, proximaNota, NEGRA * d * 1.2, 0.02, 'sine');
+    proximaNota += NEGRA * d;
+    beatEnCompas += d;
+    while (beatEnCompas >= 4) { beatEnCompas -= 4; compas++; }
+    idx++;
+  }
+}
+const btnM = document.getElementById('btnMusica');
+btnM.addEventListener('click', () => {
+  if (!ctx) {
+    ctx = new (window.AudioContext || window.webkitAudioContext)();
+    master = ctx.createGain();
+    const filtro = ctx.createBiquadFilter();
+    filtro.type = 'lowpass'; filtro.frequency.value = 1900;
+    const eco = ctx.createDelay(); eco.delayTime.value = 0.34;
+    const ecoGain = ctx.createGain(); ecoGain.gain.value = 0.2;
+    master.connect(filtro); filtro.connect(ctx.destination);
+    filtro.connect(eco); eco.connect(ecoGain); ecoGain.connect(ctx.destination);
+    master.gain.value = 0.9;
+  }
+  tocando = !tocando;
+  btnM.classList.toggle('activa', tocando);
+  if (tocando) {
+    ctx.resume();
+    proximaNota = ctx.currentTime + 0.1;
+    idx = 0; beatEnCompas = 0; compas = 0;
+    timer = setInterval(agenda, 120);
+  } else {
+    clearInterval(timer);
+  }
+});
+</script>
+</body>
+</html>
