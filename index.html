@@ -307,7 +307,7 @@ const pases = params.get('pases');
 if (invitado) document.getElementById('nombreInvitado').textContent = invitado;
 if (pases) document.getElementById('pasesInvitado').textContent = pases + (pases === '1' ? ' pase reservado' : ' pases reservados');
 
-const msj = encodeURIComponent(`Hola! Confirmo mi asistencia al baby shower de Regina 🎀 ${invitado ? '— ' + invitado : ''}${pases ? ' (' + pases + ' personas)' : ''}`);
+const msj = encodeURIComponent(`Hola! Confirmo mi asistencia al baby shower de Regina ${invitado ? '— ' + invitado : ''}${pases ? ' (' + pases + ' personas)' : ''}`);
 document.getElementById('btnRsvp').href = `https://wa.me/16573776892?text=${msj}`;
 
 const objetivo = new Date('2026-10-04T16:00:00-06:00').getTime();
